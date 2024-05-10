@@ -87,81 +87,87 @@
       loadTheme();
 
       // Function to handle user commands
-      function handleCommand(command) {
-        let response = "";
+function handleCommand(command) {
+  let response = "";
 
-        const parts = command.trim().split(" ");
-        const baseCommand = parts[0].toLowerCase();
-        const theme = parts.slice(1).join(" ").toLowerCase();
+  const parts = command.trim().split(" ");
+  const baseCommand = parts[0].toLowerCase();
+  const theme = parts.slice(1).join(" ").toLowerCase();
 
-        switch (baseCommand) {
-          case "ls":
-            response =
-              "<h2>Available Commands:</h2>" +
-              "<ul>" +
-              "<li>ls - List available commands</li>" +
-              "<li>skills - View my skills</li>" +
-              "<li>projects - See my projects</li>" +
-              "<li>about - Information about me</li>" +
-              "<li>contact - Contact information</li>" +
-              "<li>theme [elementaryos/mint/ubuntu] - Switch theme</li>" +
-              "</ul>";
-            break;
-          case "skills":
-            response =
-              "<h2>Skills:</h2><p>HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, CTF (Capture The Flag), Web Security, Penetration Testing, etc.</p>";
-            break;
-          case "projects":
-            response =
-              "<h2>Projects:</h2>" +
-              "<ul>" +
-              "<li><strong>Web Project 1</strong><br>Description of Web Project 1...</li>" +
-              "<li><strong>CTF Challenge 1</strong><br>Description of CTF Challenge 1...</li>" +
-              "<li><strong>Web Project 2</strong><br>Description of Web Project 2...</li>" +
-              "<li><strong>CTF Challenge 2</strong><br>Description of CTF Challenge 2...</li>" +
-              "</ul>";
-            break;
-          case "about":
-            response =
-              "<h2>About Me:</h2><p>I am a passionate web developer and CTF player, specializing in creating secure web applications and solving cybersecurity challenges.</p>";
-            break;
-          case "contact":
-            response =
-              "<h2>Contact Me:</h2><p>You can contact me at example@email.com</p>";
-            break;
-          case "theme":
-            switch (theme) {
-              case "elementaryos":
-                applyTheme("elementaryos");
-                response = "<p>Switched to elementary OS theme.</p>";
-                break;
-              case "mint":
-                applyTheme("linuxmint");
-                response = "<p>Switched to Linux Mint theme.</p>";
-                break;
-              case "ubuntu":
-                applyTheme("ubuntu");
-                response = "<p>Switched to Ubuntu theme.</p>";
-                break;
-              default:
-                response =
-                  '<p>Invalid theme specified. Use "elementaryos", "mint", or "ubuntu".</p>';
-                break;
-            }
-            break;
-          default:
-            response = `<p>Command not found: ${command}</p>`;
-            break;
-        }
-
-        if (response) {
-          // Append response to content area
-          terminalContent.innerHTML += response;
-
-          // Scroll to bottom of content area
-          terminalContent.scrollTop = terminalContent.scrollHeight;
-        }
+  switch (baseCommand) {
+    case "ls":
+      response =
+        "<span class='command-arrow'></span>" +
+        "<h2>Available Commands:</h2>" +
+        "<ul>" +
+        "<li>ls - List available commands</li>" +
+        "<li>skills - View my skills</li>" +
+        "<li>projects - See my projects</li>" +
+        "<li>about - Information about me</li>" +
+        "<li>contact - Contact information</li>" +
+        "<li>theme [elementaryos/mint/ubuntu] - Switch theme</li>" +
+        "</ul>";
+      break;
+    case "skills":
+      response =
+        "<span class='command-arrow'></span>" +
+        "<h2>Skills:</h2><p>HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, CTF (Capture The Flag), Web Security, Penetration Testing, etc.</p>";
+      break;
+    case "projects":
+      response =
+        "<span class='command-arrow'></span>" +
+        "<h2>Projects:</h2>" +
+        "<ul>" +
+        "<li><strong>Web Project 1</strong><br>Description of Web Project 1...</li>" +
+        "<li><strong>CTF Challenge 1</strong><br>Description of CTF Challenge 1...</li>" +
+        "<li><strong>Web Project 2</strong><br>Description of Web Project 2...</li>" +
+        "<li><strong>CTF Challenge 2</strong><br>Description of CTF Challenge 2...</li>" +
+        "</ul>";
+      break;
+    case "about":
+      response =
+        "<span class='command-arrow'></span>" +
+        "<h2>About Me:</h2><p>I am a passionate web developer and CTF player, specializing in creating secure web applications and solving cybersecurity challenges.</p>";
+      break;
+    case "contact":
+      response =
+        "<span class='command-arrow'></span>" +
+        "<h2>Contact Me:</h2><p>You can contact me at example@email.com</p>";
+      break;
+    case "theme":
+      switch (theme) {
+        case "elementaryos":
+          applyTheme("elementaryos");
+          response = "<span class='command-arrow'></span><p>Switched to elementary OS theme.</p>";
+          break;
+        case "mint":
+          applyTheme("linuxmint");
+          response = "<span class='command-arrow'></span><p>Switched to Linux Mint theme.</p>";
+          break;
+        case "ubuntu":
+          applyTheme("ubuntu");
+          response = "<span class='command-arrow'></span><p>Switched to Ubuntu theme.</p>";
+          break;
+        default:
+          response =
+            "<span class='command-arrow'></span><p>Invalid theme specified. Use 'elementaryos', 'mint', or 'ubuntu'.</p>";
+          break;
       }
+      break;
+    default:
+      response = `<span class='command-arrow'></span><p>Command not found: ${command}</p>`;
+      break;
+  }
+
+  if (response) {
+    // Append response to content area
+    terminalContent.innerHTML += response;
+
+    // Scroll to bottom of content area
+    terminalContent.scrollTop = termilsnalContent.scrollHeight;
+  }
+}
+
 
       // Function to handle form submission
       function handleFormSubmit(event) {

@@ -8,7 +8,12 @@
   --scrollbar-thumb: #4caf50;
   --scrollbar-track: #424242;
 }
-
+.command-arrow {
+    color: #00ff94; /* Green arrow color */
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
 body {
   font-family: "Ubuntu Mono", monospace;
   background-color: var(--dark-bg);
