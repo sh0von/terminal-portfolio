@@ -1,0 +1,41 @@
+{
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Next JS",
+      "Svelte Kit JS",
+      "Node.js",
+      "Express",
+      "Python",
+      "Flask",
+      "Git",
+      "SQL",
+      "MongoDB",
+      "CTF (Capture The Flag)",
+      "Web Security",
+      "Penetration Testing"
+    ],
+    "projects": [
+      {
+        "name": "Web Project 1",
+        "description": "Description of Web Project 1..."
+      },
+      {
+        "name": "CTF Challenge 1",
+        "description": "Description of CTF Challenge 1..."
+      },
+      {
+        "name": "Web Project 2",
+        "description": "Description of Web Project 2..."
+      },
+      {
+        "name": "CTF Challenge 2",
+        "description": "Description of CTF Challenge 2..."
+      }
+    ],
+    "aboutMe": "I am a passionate web developer and CTF player, specializing in creating secure web applications and solving cybersecurity challenges.",
+    "contactEmail": "example@email.com"
+  }
+  
