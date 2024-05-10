@@ -20,6 +20,8 @@
         <p>
           Welcome to my terminal-style portfolio!
         </p>
+        <p>
+          Type "<strong>ls</strong>" to list available commands.
       </div>
       <form onsubmit="handleFormSubmit(event)" autocomplete="off">
         <div class="input-container">
@@ -168,7 +170,6 @@
         handleCommand(command);
         inputBox.value = ""; // Clear input field after handling command
       }
-      handleCommand("ls");
     </script>
   </body>
 </html>
