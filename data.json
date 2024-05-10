@@ -19,20 +19,44 @@
     ],
     "projects": [
       {
-        "name": "Web Project 1",
-        "description": "Description of Web Project 1..."
+        "name": "Course Schedule Management API",
+        "description": "A simple API to manage courses, instructors, departments, and batches for universities or educational institutions."
       },
       {
-        "name": "CTF Challenge 1",
-        "description": "Description of CTF Challenge 1..."
+        "name": "Wave",
+        "description": "Ngl Link alternative with more privacy and security."
       },
       {
-        "name": "Web Project 2",
-        "description": "Description of Web Project 2..."
+        "name": "Hush",
+        "description": "Anonymously share your thoughts with the world."
       },
       {
-        "name": "CTF Challenge 2",
-        "description": "Description of CTF Challenge 2..."
+        "name": "Product Verification System",
+        "description": "A UI of a product verification system for a company."
+      },
+      {
+        "name": "CodeVista",
+        "description": "A secure snippet sharing API for developers."
+      },
+      {
+        "name": "Tuition Tracker UI", 
+        "description": "UI of a tuition tracking system for teacher and students."
+      },
+      {
+        "name":"Minus 1",
+        "description":"A multidisciplinary github alternative with more privacy and security for BUET Hackathon."
+      },
+      {
+        "name":"CTFphp",
+        "description":"A CTF organizer for small CTFs in PHP."
+      },
+      {
+        "name":"Note Tracker for CUET-WRE",
+        "description":"A note tracking system for CUET-WRE."
+      },
+      {
+        "name":"CTF Writeups Website",
+        "description":"A website to share CTF writeups."
       }
     ],
     

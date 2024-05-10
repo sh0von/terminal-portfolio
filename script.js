@@ -97,11 +97,11 @@ function handleCommand(command) {
           response = "<h2>Projects:</h2><ul>";
           projects.forEach((project) => {
             response +=
-              "<li><strong>" +
+              "<li><p>" +
               project.name +
-              "</strong><br>" +
+              "</p>" +
               project.description +
-              "</li>";
+              "</li><hr>";
           });
           response += "</ul>";
           appendResponse(response);
