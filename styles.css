@@ -1,19 +1,9 @@
-:root {
-  --dark-bg: #2e2e2e;
-  --light-bg: #ffffff;
-  --green-text: #4caf50;
-  --black-text: #000000;
-  --green-border: #4caf50;
-  --black-border: #000000;
-  --scrollbar-thumb: #4caf50;
-  --scrollbar-track: #424242;
-}
 .command-arrow {
-    color: #00ff94; /* Green arrow color */
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
+  color: #00ff94; /* Green arrow color */
+  font-weight: bold;
+  margin-right: 5px;
+}
+
 body {
   font-family: "Ubuntu Mono", monospace;
   background-color: var(--dark-bg);
