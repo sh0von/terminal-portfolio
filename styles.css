@@ -1,0 +1,134 @@
+
+:root {
+    --dark-bg: #2e2e2e;
+    --light-bg: #ffffff;
+    --green-text: #4caf50;
+    --black-text: #000000;
+    --green-border: #4caf50;
+    --black-border: #000000;
+    --scrollbar-thumb: #4caf50;
+    --scrollbar-track: #424242;
+  }
+
+  body {
+    font-family: "Ubuntu Mono", monospace;
+    background-color: var(--dark-bg);
+    color: var(--green-text);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+width: 90%; /* Take up 90% of the parent width */
+max-width: 600px; /* Maximum width of 600px */
+height: 400px; /* Fixed height of 400px */
+background-color: var(--dark-bg); /* Use the dark background color defined by CSS variable */
+padding: 20px; /* Padding inside the terminal */
+border-radius: 20px; /* Rounded corners */
+border: 1px solid var(--green-border); /* Border with white color */
+overflow: hidden; /* Hide overflow content */
+display: flex; /* Use flexbox layout */
+flex-direction: column; /* Stack children in a column */
+}
+
+  .header {
+    color: var(--green-text); /* Green text */
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .input-label {
+    color: var(--green-text); /* Green text */
+    margin-right: 5px;
+  }
+
+  .input-box {
+    flex: 1;
+    background-color: transparent;
+    color: var(--green-text); /* Green text */
+    border: none;
+    padding: 5px;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    caret-color: var(--green-text); /* Green caret */
+  }
+
+  .content {
+    color: var(--green-text); /* Green text */
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-y: auto;
+    flex: 1; /* Take remaining vertical space */
+    padding-right: 10px;
+    border-right: 1px solid var(--green-border); /* Green border */
+    scrollbar-width: thin; /* Custom thin scrollbar */
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); /* Custom scrollbar colors */
+  }
+
+  .content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+
+  .content::-webkit-scrollbar-track {
+    background: var(
+      --scrollbar-track
+    ); /* Dark background for scrollbar track */
+  }
+
+  .content::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb); /* Green scrollbar thumb */
+    border-radius: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    color: var(--green-text); /* Green link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #a3ffbf; /* Lighter green on hover */
+  }
+
+  .command-arrow::before {
+    content: "➜"; /* Command arrow icon */
+    color: var(--green-text); /* Green arrow */
+    margin-right: 5px;
+  }
+
+  h2 {
+    color: var(--green-text); /* Green heading */
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  pre {
+    white-space: pre;
+    font-family: "Ubuntu Mono", monospace;
+    color: var(--green-text);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
