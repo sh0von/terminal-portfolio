@@ -18,14 +18,14 @@ body {
 
 .terminal {
   width: 90%; /* Take up 90% of the parent width */
-  max-width: 600px; /* Maximum width of 600px */
-  height: 400px; /* Fixed height of 400px */
+  max-width: 800px; /* Maximum width of 600px */
+  height: 450px; /* Fixed height of 400px */
   margin: 10px;
   background-color: var(
     --dark-bg
   ); /* Use the dark background color defined by CSS variable */
   padding: 20px; /* Padding inside the terminal */
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 0; /* Rounded corners */
   border: 1px solid var(--green-border); /* Border with white color */
   overflow: hidden; /* Hide overflow content */
   display: flex; /* Use flexbox layout */

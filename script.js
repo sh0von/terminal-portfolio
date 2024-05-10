@@ -76,7 +76,7 @@ function handleCommand(command) {
         "<li>projects - See my projects</li>" +
         "<li>about - Information about me</li>" +
         "<li>contact - Contact information</li>" +
-        "<li>theme [elementaryos/mint/ubuntu] - Switch theme</li>" +
+        "<li>theme [debian/mint/ubuntu/fedora] - Switch theme</li>" +
         "</ul>";
       break;
     case "skills":
