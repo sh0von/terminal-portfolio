@@ -3,9 +3,12 @@
   font-weight: bold;
   margin-right: 5px;
 }
-
+* {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+}
 body {
-  font-family: "Ubuntu Mono", monospace;
   background-color: var(--dark-bg);
   color: var(--green-text);
   padding: 0;
