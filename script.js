@@ -90,27 +90,32 @@ function handleCommand(command) {
           appendResponse(response);
         });
       break;
-    case "projects":
-      // Fetch projects from data.json
-      fetchJsonData("data.json", "projects")
-        .then((projects) => {
-          response = "<h2>Projects:</h2><ul>";
-          projects.forEach((project) => {
-            response +=
-              "<li><p>" +
-              project.name +
-              "</p>" +
-              project.description +
-              "</li><hr>";
+      case "projects":
+        // Fetch projects from data.json
+        fetchJsonData("data.json", "projects")
+          .then((projects) => {
+            response = "<h2>Projects:</h2><ul>";
+            projects.forEach((project, index) => {
+              // Calculate serial number (index + 1)
+              const serialNumber = index + 1;
+              response +=
+                "<li><p><strong>" +
+                serialNumber +
+                ".</strong> " +
+                project.name +
+                "</p>" +
+                project.description +
+                "</li><hr>";
+            });
+            response += "</ul>";
+            appendResponse(response);
+          })
+          .catch(() => {
+            response = "<p>Error fetching projects data.</p>";
+            appendResponse(response);
           });
-          response += "</ul>";
-          appendResponse(response);
-        })
-        .catch(() => {
-          response = "<p>Error fetching projects data.</p>";
-          appendResponse(response);
-        });
-      break;
+        break;
+      
     case "about":
       // Fetch about me information from data.json
       fetchJsonData("data.json", "aboutMe")
