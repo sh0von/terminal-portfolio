@@ -99,13 +99,13 @@ function handleCommand(command) {
               // Calculate serial number (index + 1)
               const serialNumber = index + 1;
               response +=
-                "<li><p><strong>" +
+                "<li><p class='highlight'><strong>" +
                 serialNumber +
                 ".</strong> " +
                 project.name +
                 "</p>" +
                 project.description +
-                "</li><hr>";
+                "</li>";
             });
             response += "</ul>";
             appendResponse(response);
