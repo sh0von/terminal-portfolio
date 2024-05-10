@@ -5,6 +5,12 @@ hr {
     color: #333;  /* old IE */
     background-color: #333;  /* Modern Browsers */
   }
+  .highlight{
+    /* Highlight text */
+    background-color: var(--green-border);
+    color: #000;
+  
+  }
 .u{
     /* underline text */
     text-decoration: underline;
