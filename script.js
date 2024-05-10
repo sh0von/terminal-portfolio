@@ -46,14 +46,13 @@ function applyTheme(theme) {
 function loadTheme() {
   const savedTheme = localStorage.getItem("selectedTheme");
   //if no local storage set theme to debian
-    if (!savedTheme) {
-      applyTheme("debian");
-    }
+  if (!savedTheme) {
+    applyTheme("debian");
+  }
 
   if (savedTheme) {
     applyTheme(savedTheme);
   }
-
 }
 
 // Initialize theme on page load
@@ -125,20 +124,34 @@ function handleCommand(command) {
         });
       break;
     case "contact":
-      // Fetch contact email from data.json
-      fetchJsonData("data.json", "contactEmail")
-        .then((contactEmail) => {
-          response =
-            "<h2>Contact Me:</h2><p>You can contact me at " +
-            contactEmail +
-            "</p>";
-          appendResponse(response);
-        })
-        .catch(() => {
-          response = "<p>Error fetching contact information.</p>";
-          appendResponse(response);
-        });
+      // Function to fetch data from JSON file
+      const fetchDataFromJson = async () => {
+        try {
+          const response = await fetch("data.json"); // Assuming data.json is in the same directory
+          const data = await response.json();
+
+          // Extract contact details from the fetched JSON data
+          const { contactEmail, github, linkedin, resume, facebook } = data;
+
+          // Generate HTML to display the fetched contact information
+          const responseHtml = `
+              <h2>Contact Me:</h2>
+              <p>You can contact me at <a href="mailto:${contactEmail}">${contactEmail}</a> </p>
+              <p class="u"><a href="${github}" target="_blank">GitHub </a> / <a href="${linkedin}" target="_blank">LinkedIn</a> / <a href="${resume}" target="_blank">Resume</a> / <a href="${facebook}" target="_blank">Facebook </a></p>
+            `;
+
+          // Append the generated HTML to the DOM
+          appendResponse(responseHtml);
+        } catch (error) {
+          const errorMessage = "Error fetching contact information.";
+          appendResponse(`<p>${errorMessage}</p>`);
+        }
+      };
+
+      // Call the fetchDataFromJson function to fetch and display contact details
+      fetchDataFromJson();
       break;
+
     case "theme":
       switch (theme) {
         case "debian":
@@ -193,4 +206,4 @@ function handleFormSubmit(event) {
   inputBox.value = ""; // Clear input field after handling command
 }
 
-handleCommand("ls"); // List available commands on page load    
+handleCommand("ls"); // List available commands on page load

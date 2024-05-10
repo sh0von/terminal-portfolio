@@ -1,3 +1,7 @@
+.u{
+    /* underline text */
+    text-decoration: underline;
+}
 .command-arrow {
   color: #00ff94; /* Green arrow color */
   font-weight: bold;

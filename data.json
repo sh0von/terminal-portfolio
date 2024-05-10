@@ -3,6 +3,8 @@
       "HTML",
       "CSS",
       "JavaScript",
+      "CTF (Capture The Flag)",
+      "Web Security",
       "React",
       "Next JS",
       "Svelte Kit JS",
@@ -13,8 +15,6 @@
       "Git",
       "SQL",
       "MongoDB",
-      "CTF (Capture The Flag)",
-      "Web Security",
       "Penetration Testing"
     ],
     "projects": [
@@ -35,7 +35,13 @@
         "description": "Description of CTF Challenge 2..."
       }
     ],
-    "aboutMe": "I am a passionate web developer and CTF player, specializing in creating secure web applications and solving cybersecurity challenges.",
-    "contactEmail": "minar@duck.com"
+    
+        "aboutMe": "CTF, web development, and cybersecurity are my passions. I focus on safe internet apps and complex cybersecurity concerns. I follow web development and cybersecurity. I adore leveraging my programming and problem-solving talents to create secure, innovative user-focused solutions. I've programmed in web languages like Next.js and enjoy the challenge of secure code to build powerful apps. Beyond programming, I compete in CTFs to understand and defend against real-world security threats. And I adore how technology makes the digital world safer and more efficient.",
+        "contactEmail": "minar@duck.com",
+        "github": "https://github.com/sh0von",
+        "linkedin": "#",
+        "resume": "#",
+        "facebook": "https://www.facebook.com/minar.svn"
+
   }
   
