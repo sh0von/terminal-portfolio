@@ -20,7 +20,6 @@ body {
   width: 90%; /* Take up 90% of the parent width */
   max-width: 800px; /* Maximum width of 600px */
   height: 450px; /* Fixed height of 400px */
-  margin: 10px;
   background-color: var(
     --dark-bg
   ); /* Use the dark background color defined by CSS variable */
