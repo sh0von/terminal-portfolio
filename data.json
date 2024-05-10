@@ -57,6 +57,15 @@
       {
         "name":"CTF Writeups Website",
         "description":"A website to share CTF writeups."
+      },
+      {
+        "name":"TMonitor",
+        "description":"A website to monitor tuition with python."
+      },
+      {
+        "name":"CF solution in Python",
+        "description":"A Git repository to share Codeforces solutions in Python."
+
       }
     ],
     
