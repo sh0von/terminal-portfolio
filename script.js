@@ -159,7 +159,7 @@ function handleCommand(command) {
           break;
         default:
           response =
-            '<p>Invalid theme specified. Use "elementaryos", "mint", or "ubuntu".</p>';
+            '<p>Invalid theme specified. Use "debian", "mint","fedora", or "ubuntu".</p>';
           break;
       }
       break;
@@ -192,3 +192,5 @@ function handleFormSubmit(event) {
   handleCommand(command);
   inputBox.value = ""; // Clear input field after handling command
 }
+
+handleCommand("ls"); // List available commands on page load    
