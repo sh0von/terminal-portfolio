@@ -115,7 +115,7 @@ function handleCommand(command) {
       // Fetch about me information from data.json
       fetchJsonData("data.json", "aboutMe")
         .then((aboutMe) => {
-          response = "<h2>About Me:</h2><p>" + aboutMe + "</p>";
+          response = "<h2>About Me:</h2><p style='text-align:justify'>" + aboutMe + "</p>";
           appendResponse(response);
         })
         .catch(() => {
